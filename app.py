@@ -6,6 +6,10 @@ from main import process_images  # Import your logic from main.py
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def hello_world():
+    return "Hello, World!"
+    
 @app.route('/stylize', methods=['POST'])
 def stylize():
     try:
